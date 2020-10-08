@@ -6,13 +6,12 @@ on:
   pull_request:
     branches: [ master ]
 
-strategy:
-    matrix:
-        efcore: ['1.0.0', '1.1.6', '2.0.0', '2.2.6', '3.0.0', '3.1.8']
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        efcore: [ '1.0.0', '1.1.6', '2.0.0', '2.2.6', '3.0.0', '3.1.8' ]
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1
