@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ master ]
 
+strategy:
+    matrix:
+        efcore: ['1.0.0', '1.1.6', '2.0.0', '2.2.6', '3.0.0', '3.1.8']
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,8 +17,8 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore --property:EntityFrameworkCoreVersion=${{matrix.efcore}}
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore --property:EntityFrameworkCoreVersion=${{matrix.efcore}}
     - name: Run Tests
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal --property:EntityFrameworkCoreVersion=${{matrix.efcore}}
