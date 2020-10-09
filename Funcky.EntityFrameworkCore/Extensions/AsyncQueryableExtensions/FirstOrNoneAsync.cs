@@ -14,9 +14,9 @@ namespace Funcky.EntityFrameworkCore.Extensions
         /// Returns the first element of a sequence as an <see cref="Option" />, or a <see cref="Option{T}.None" /> value if the sequence contains no elements.
         /// </summary>
         /// <typeparam name="TSource">the inner type of the queryable.</typeparam>
-        public static Task<Option<TSource>> FirstOrNoneAsync<TSource>(this IQueryable<TSource> source)
+        public static async Task<Option<TSource>> FirstOrNoneAsync<TSource>(this IQueryable<TSource> source)
             where TSource : notnull
-            => source
+            => await source
                 .Select(x => Option.Some(x))
                 .FirstOrDefaultAsync();
 
@@ -24,9 +24,9 @@ namespace Funcky.EntityFrameworkCore.Extensions
         /// Returns the first element of the sequence as an <see cref="Option{T}" /> that satisfies a condition or a <see cref="Option{T}.None" /> value if no such element is found.
         /// </summary>
         /// <typeparam name="TSource">the inner type of the queryable.</typeparam>
-        public static Task<Option<TSource>> FirstOrNoneAsync<TSource>(this IQueryable<TSource> source, Expression<Func<TSource, bool>> predicate)
+        public static async Task<Option<TSource>> FirstOrNoneAsync<TSource>(this IQueryable<TSource> source, Expression<Func<TSource, bool>> predicate)
             where TSource : notnull
-            => source
+            => await source
                 .Where(predicate)
                 .Select(x => Option.Some(x))
                 .FirstOrDefaultAsync();
