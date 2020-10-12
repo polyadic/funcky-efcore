@@ -12,12 +12,14 @@ jobs:
     strategy:
       matrix:
         efcore: ['3.1.0', '3.1.8']
+    env:
+      EntityFrameworkCoreVersion: ${{matrix.efcore}}
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1
     - name: Restore dependencies
-      run: dotnet restore -property:EntityFrameworkCoreVersion=${{matrix.efcore}}
+      run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore -property:EntityFrameworkCoreVersion=${{matrix.efcore}}
+      run: dotnet build --configuration Release --no-restore
     - name: Run Tests
-      run: dotnet test --no-restore --verbosity normal -property:EntityFrameworkCoreVersion=${{matrix.efcore}}
+      run: dotnet test --no-restore --verbosity normal
