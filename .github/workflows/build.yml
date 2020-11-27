@@ -9,6 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        efcore: ['3.1.0', '3.1.8']
+    env:
+      EntityFrameworkCoreVersion: ${{matrix.efcore}}
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-dotnet@v1
