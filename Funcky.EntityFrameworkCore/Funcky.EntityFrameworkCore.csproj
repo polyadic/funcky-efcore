@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk; Microsoft.Build.CentralPackageVersions">
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <TargetFramework Condition="'$(EntityFrameworkCoreVersion)' == '5.0.0'">netstandard2.1</TargetFramework>
+        <TargetFramework Condition="'$(EntityFrameworkCoreVersion)' == '5.0.2'">netstandard2.1</TargetFramework>
         <LangVersion>9.0</LangVersion>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
