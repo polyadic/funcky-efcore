@@ -11,6 +11,9 @@
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
+    <PropertyGroup>
+        <RootNamespace>Funcky</RootNamespace>
+    </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Funcky" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" />

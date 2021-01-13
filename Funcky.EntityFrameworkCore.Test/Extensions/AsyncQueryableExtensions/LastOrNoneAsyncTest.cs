@@ -1,9 +1,7 @@
 using System.Linq;
 using System.Threading.Tasks;
-using Funcky.EntityFrameworkCore.Extensions;
 using Funcky.Extensions;
 using Funcky.Xunit;
-using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 namespace Funcky.EntityFrameworkCore.Test.Extensions.AsyncQueryableExtensions

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Funcky.Monads;
 using Microsoft.EntityFrameworkCore;
 
-namespace Funcky.EntityFrameworkCore.Extensions
+namespace Funcky.Extensions
 {
     public static partial class AsyncQueryableExtensions
     {
