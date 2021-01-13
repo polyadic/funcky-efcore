@@ -22,4 +22,4 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore /p:TreatWarningsAsErrors=true
     - name: Run Tests
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --configuration Release --no-build
