@@ -4,7 +4,6 @@
         <TargetFramework Condition="'$(EntityFrameworkCoreVersion)' == '5.0.2'">netstandard2.1</TargetFramework>
         <LangVersion>9.0</LangVersion>
         <Nullable>enable</Nullable>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Product>Interoperability between Funcky and EF Core</Product>
         <Description>Interoperability between Funcky and EF Core</Description>
         <PackageTags>Functional Monad EFCore EntityFramework</PackageTags>
