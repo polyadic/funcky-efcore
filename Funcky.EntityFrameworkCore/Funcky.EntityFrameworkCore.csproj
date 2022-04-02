@@ -2,8 +2,9 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <TargetFramework Condition="'$(EntityFrameworkCoreVersion)' == '5.0.2'">netstandard2.1</TargetFramework>
-        <LangVersion>9.0</LangVersion>
+        <LangVersion>10.0</LangVersion>
         <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
         <Product>Interoperability between Funcky and EF Core</Product>
         <Description>Interoperability between Funcky and EF Core</Description>
         <PackageTags>Functional Monad EFCore EntityFramework</PackageTags>

@@ -1,5 +1,3 @@
-using System.Linq;
-using System.Threading.Tasks;
 using Funcky.EntityFrameworkCore.Extensions;
 using Funcky.Xunit;
 using Xunit;
