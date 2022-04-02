@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        efcore: ['lowestSupported', '3.1.8', '5.0.2']
+        efcore: ['3.1.23', '5.0.15']
     env:
       EntityFrameworkCoreVersion: ${{matrix.efcore}}
     steps:
