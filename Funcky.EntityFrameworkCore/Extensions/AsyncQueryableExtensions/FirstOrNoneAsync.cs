@@ -14,7 +14,8 @@ namespace Funcky.EntityFrameworkCore.Extensions
             where TSource : notnull
             => await source
                 .Select(x => Option.Some(x))
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync()
+                .ConfigureAwait(false);
 
         /// <summary>
         /// Returns the first element of the sequence as an <see cref="Option{T}" /> that satisfies a condition or a <see cref="Option{T}.None" /> value if no such element is found.
@@ -25,6 +26,7 @@ namespace Funcky.EntityFrameworkCore.Extensions
             => await source
                 .Where(predicate)
                 .Select(x => Option.Some(x))
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync()
+                .ConfigureAwait(false);
     }
 }

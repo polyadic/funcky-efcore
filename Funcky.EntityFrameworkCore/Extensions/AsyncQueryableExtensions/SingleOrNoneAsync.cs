@@ -25,6 +25,7 @@ namespace Funcky.EntityFrameworkCore.Extensions
             => await source
                 .Where(predicate)
                 .Select(x => Option.Some(x))
-                .SingleOrDefaultAsync();
+                .SingleOrDefaultAsync()
+                .ConfigureAwait(false);
     }
 }
