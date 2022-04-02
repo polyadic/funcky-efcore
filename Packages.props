@@ -2,8 +2,7 @@
 <Project>
 	<ItemGroup Label="Runtime Dependencies">
 		<PackageReference Update="Funcky" Version="[2.2.0, 3)" />
-		<PackageReference Update="Microsoft.EntityFrameworkCore" Version="$(EntityFrameworkCoreVersion)" />
-		<PackageReference Update="Microsoft.EntityFrameworkCore" Version="[3.1.0, 6)" Condition="'$(EntityFrameworkCoreVersion)' == ''" />
+		<PackageReference Update="Microsoft.EntityFrameworkCore" Version="[3.1.0, 7)" />
 	</ItemGroup>
 	<ItemGroup Label="Build Dependencies">
 		<PackageReference Update="Messerli.CodeStyle" Version="2.1.2" />
