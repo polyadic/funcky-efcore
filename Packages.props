@@ -6,6 +6,7 @@
 	</ItemGroup>
 	<ItemGroup Label="Build Dependencies">
 		<PackageReference Update="Messerli.CodeStyle" Version="2.1.2" />
+		<PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
 	</ItemGroup>
 	<ItemGroup Label="Test Dependencies">
 		<PackageReference Update="Funcky.Xunit" Version="0.1.3" />
