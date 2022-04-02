@@ -7,8 +7,6 @@
 	</ItemGroup>
 	<ItemGroup Label="Build Dependencies">
 		<PackageReference Update="Messerli.CodeStyle" Version="2.1.2" />
-		<PackageReference Update="Equals.Fody" Version="4.0.1" />
-		<PackageReference Update="Fody" Version="6.2.6" />
 	</ItemGroup>
 	<ItemGroup Label="Test Dependencies">
 		<PackageReference Update="Funcky.Xunit" Version="0.1.3" />
