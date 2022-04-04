@@ -5,9 +5,9 @@ env:
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -35,7 +35,7 @@ jobs:
     - name: Generate NuGet Packages
       run: dotnet pack --configuration Release --output nupkg
     - uses: actions/upload-artifact@v2
-      if: success() && github.ref == 'refs/heads/master'
+      if: success() && github.ref == 'refs/heads/main'
       with:
         name: nupkg
         path: nupkg/*
