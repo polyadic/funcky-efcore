@@ -8,10 +8,12 @@
         <Description>Interoperability between Funcky and EF Core</Description>
         <PackageTags>Functional Monad EFCore EntityFramework</PackageTags>
         <Version>0.1.0</Version>
+    </PropertyGroup>
+    <PropertyGroup Label="Symbols">
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
-    <PropertyGroup>
+    <PropertyGroup Label="Analyzers">
         <EnableNETAnalyzers>true</EnableNETAnalyzers>
         <AnalysisModeReliability>All</AnalysisModeReliability>
     </PropertyGroup>
