@@ -12,6 +12,7 @@
     <PropertyGroup Label="Symbols">
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <NoWarn>$(NoWarn);RS0026</NoWarn><!-- RS0026: Do not add multiple overloads with optional parameters -->
     </PropertyGroup>
     <PropertyGroup Label="Analyzers">
         <EnableNETAnalyzers>true</EnableNETAnalyzers>
@@ -20,5 +21,6 @@
     <ItemGroup>
         <PackageReference Include="Funcky" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" />
+        <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" PrivateAssets="all" />
     </ItemGroup>
 </Project>
