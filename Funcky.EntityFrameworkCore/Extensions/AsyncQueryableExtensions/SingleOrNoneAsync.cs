@@ -14,7 +14,8 @@ public static partial class AsyncQueryableExtensions
         where TSource : notnull
         => await source
             .Select(x => Option.Some(x))
-            .SingleOrDefaultAsync();
+            .SingleOrDefaultAsync()
+            .ConfigureAwait(false);
 
     /// <summary>
     /// Returns the only element of a sequence that satisfies a specified condition as an <see cref="Option{T}" /> or a <see cref="Option{T}.None" /> value if no such element exists; this method throws an exception if more than one element satisfies the condition.

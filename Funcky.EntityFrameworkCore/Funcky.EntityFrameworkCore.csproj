@@ -11,6 +11,10 @@
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
+    <PropertyGroup>
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <AnalysisModeReliability>All</AnalysisModeReliability>
+    </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Funcky" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" />
