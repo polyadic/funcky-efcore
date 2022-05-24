@@ -1,4 +1,4 @@
-using Funcky.EntityFrameworkCore.Extensions;
+using Funcky.Extensions;
 using Funcky.Xunit;
 using Xunit;
 

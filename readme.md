@@ -14,7 +14,7 @@ These are analogous to the ones provided by [`EntityFrameworkQueryableExtensions
 Example:
 ```csharp
 using System;
-using Funcky.EntityFrameworkCore.Extensions;
+using Funcky.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 DbContext context;

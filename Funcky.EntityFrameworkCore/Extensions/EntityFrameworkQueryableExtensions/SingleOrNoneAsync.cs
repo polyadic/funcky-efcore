@@ -2,9 +2,9 @@ using System.Linq.Expressions;
 using Funcky.Monads;
 using Microsoft.EntityFrameworkCore;
 
-namespace Funcky.EntityFrameworkCore.Extensions;
+namespace Funcky.Extensions;
 
-public static partial class AsyncQueryableExtensions
+public static partial class EntityFrameworkQueryableExtensions
 {
     /// <summary>
     /// Returns the only element of a sequence as an <see cref="Option" />, or a <see cref="Option{T}.None" /> value if the sequence is empty; this method throws an exception if there is more than one element in the sequence.
