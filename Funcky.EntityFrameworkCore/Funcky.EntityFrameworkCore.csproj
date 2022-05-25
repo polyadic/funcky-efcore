@@ -8,11 +8,23 @@
         <Description>Interoperability between Funcky and EF Core</Description>
         <PackageTags>Functional Monad EFCore EntityFramework</PackageTags>
         <Version>0.1.0</Version>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
+    </PropertyGroup>
+    <PropertyGroup Label="Symbols">
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <NoWarn>$(NoWarn);RS0026</NoWarn><!-- RS0026: Do not add multiple overloads with optional parameters -->
+    </PropertyGroup>
+    <PropertyGroup Label="Analyzers">
+        <EnableNETAnalyzers>true</EnableNETAnalyzers>
+        <AnalysisModeReliability>All</AnalysisModeReliability>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Funcky" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" />
+        <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" PrivateAssets="all" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="..\readme.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 </Project>
