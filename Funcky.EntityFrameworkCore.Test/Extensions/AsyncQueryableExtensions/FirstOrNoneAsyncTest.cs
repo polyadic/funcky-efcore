@@ -1,5 +1,4 @@
 using Funcky.Extensions;
-using Funcky.Xunit;
 using Xunit;
 
 namespace Funcky.EntityFrameworkCore.Test.Extensions.AsyncQueryableExtensions;
@@ -10,7 +9,7 @@ public sealed class FirstOrNoneAsyncTest
     public async Task ReturnsNoneWhenNoMatchingEntitiesAreFound()
     {
         using var db = new TestContext();
-        FunctionalAssert.IsNone(await db.People.FirstOrNoneAsync());
+        FunctionalAssert.None(await db.People.FirstOrNoneAsync());
     }
 
     [Fact]
@@ -22,7 +21,7 @@ public sealed class FirstOrNoneAsyncTest
         await db.People.AddAsync(insertedPerson);
         await db.SaveChangesAsync();
 
-        var person = FunctionalAssert.IsSome(await db.People.FirstOrNoneAsync());
+        var person = FunctionalAssert.Some(await db.People.FirstOrNoneAsync());
         Assert.Equal(insertedPerson.Id, person.Id);
     }
 
@@ -37,7 +36,7 @@ public sealed class FirstOrNoneAsyncTest
         await db.People.AddAsync(insertedPerson2);
         await db.SaveChangesAsync();
 
-        var person = FunctionalAssert.IsSome(await db.People.OrderBy(p => p.LastName).FirstOrNoneAsync(p => p.FirstName == "Jane"));
+        var person = FunctionalAssert.Some(await db.People.OrderBy(p => p.LastName).FirstOrNoneAsync(p => p.FirstName == "Jane"));
         Assert.Equal(insertedPerson1.Id, person.Id);
     }
 
@@ -52,7 +51,7 @@ public sealed class FirstOrNoneAsyncTest
         await db.People.AddAsync(insertedPerson2);
         await db.SaveChangesAsync();
 
-        var person = FunctionalAssert.IsSome(await db.People.OrderByDescending(p => p.LastName).FirstOrNoneAsync());
+        var person = FunctionalAssert.Some(await db.People.OrderByDescending(p => p.LastName).FirstOrNoneAsync());
         Assert.Equal(insertedPerson2.Id, person.Id);
     }
 }
