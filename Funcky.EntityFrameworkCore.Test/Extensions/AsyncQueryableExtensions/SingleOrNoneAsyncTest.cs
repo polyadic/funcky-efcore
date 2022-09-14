@@ -1,5 +1,4 @@
 using Funcky.Extensions;
-using Funcky.Xunit;
 using Xunit;
 
 namespace Funcky.EntityFrameworkCore.Test.Extensions.AsyncQueryableExtensions;
@@ -10,7 +9,7 @@ public sealed class SingleOrNoneAsyncTest
     public async Task ReturnsNoneWhenNoMatchingEntitiesAreFound()
     {
         using var db = new TestContext();
-        FunctionalAssert.IsNone(await db.People.SingleOrNoneAsync());
+        FunctionalAssert.None(await db.People.SingleOrNoneAsync());
     }
 
     [Fact]
@@ -22,7 +21,7 @@ public sealed class SingleOrNoneAsyncTest
         await db.People.AddAsync(insertedPerson);
         await db.SaveChangesAsync();
 
-        var person = FunctionalAssert.IsSome(await db.People.SingleOrNoneAsync());
+        var person = FunctionalAssert.Some(await db.People.SingleOrNoneAsync());
         Assert.Equal(insertedPerson.Id, person.Id);
     }
 
@@ -37,7 +36,7 @@ public sealed class SingleOrNoneAsyncTest
         await db.People.AddAsync(insertedPerson2);
         await db.SaveChangesAsync();
 
-        var person = FunctionalAssert.IsSome(await db.People.SingleOrNoneAsync(p => p.FirstName == "Jane"));
+        var person = FunctionalAssert.Some(await db.People.SingleOrNoneAsync(p => p.FirstName == "Jane"));
         Assert.Equal(insertedPerson1.Id, person.Id);
     }
 
