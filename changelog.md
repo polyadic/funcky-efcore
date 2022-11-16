@@ -1,4 +1,7 @@
 # Changelog
+## 1.1.0
+* Add support for Entity Framework Core 7.0.
+
 ## 1.0.0
 * Breaking: Updated to Funcky 3.0.0.
 * Breaking: Add an optional `cancellationToken` parameter to all async `IQueryable` extensions. (polyadic/funcky#433)
