@@ -5,7 +5,7 @@
 	</PropertyGroup>
 	<ItemGroup Label="Runtime Dependencies">
 		<PackageVersion Include="Funcky" Version="[3.0.0, 4)" />
-		<PackageVersion Include="Microsoft.EntityFrameworkCore" Version="[3.1.25, 8)" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore" Version="[3.1.25, 9)" />
 	</ItemGroup>
 	<ItemGroup Label="Build Dependencies">
 		<PackageVersion Include="Funcky.Analyzers" Version="1.1.0" />
@@ -16,7 +16,7 @@
 	<ItemGroup Label="Test Dependencies">
 		<PackageVersion Include="Funcky.Xunit" Version="2.0.0" />
 		<PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="$(EntityFrameworkCoreVersion)" />
-		<PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="[3.1.25, 6)" Condition="'$(EntityFrameworkCoreVersion)' == ''" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="[3.1.25, 9)" Condition="'$(EntityFrameworkCoreVersion)' == ''" />
 		<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
 		<PackageVersion Include="xunit" Version="2.4.0" />
 		<PackageVersion Include="xunit.runner.visualstudio" Version="2.4.0" />
