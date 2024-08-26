@@ -7,7 +7,7 @@
         <Product>Interoperability between Funcky and EF Core</Product>
         <Description>Interoperability between Funcky and EF Core</Description>
         <PackageTags>Functional Monad EFCore EntityFramework</PackageTags>
-        <Version>1.1.0</Version>
+        <Version>1.2.0</Version>
         <PackageReadmeFile>readme.md</PackageReadmeFile>
     </PropertyGroup>
     <PropertyGroup Label="Symbols">
