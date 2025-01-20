@@ -1,4 +1,8 @@
 # Changelog
+
+## 1.3.0
+* Add support for Entity Framework Core 8.0 and 9.0.
+
 ## 1.1.0
 * Add support for Entity Framework Core 7.0.
 
