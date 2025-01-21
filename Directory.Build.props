@@ -7,7 +7,7 @@
 		<RepositoryUrl>https://github.com/polyadic/funcky-efcore</RepositoryUrl>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Messerli.CodeStyle" PrivateAssets="all" />
+		<PackageReference Include="Polyadic.CodeStyle" PrivateAssets="all" />
 		<PackageReference Include="Funcky.Analyzers" PrivateAssets="all" />
 	</ItemGroup>
 	<PropertyGroup Label="Code Style">
