@@ -8,6 +8,7 @@
         <Description>Interoperability between Funcky and EF Core</Description>
         <PackageTags>Functional Monad EFCore EntityFramework</PackageTags>
         <Version>1.3.0</Version>
+        <PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
         <PackageReadmeFile>readme.md</PackageReadmeFile>
     </PropertyGroup>
     <PropertyGroup Label="Symbols">
@@ -18,6 +19,7 @@
     <PropertyGroup Label="Analyzers">
         <EnableNETAnalyzers>true</EnableNETAnalyzers>
         <AnalysisModeReliability>All</AnalysisModeReliability>
+        <EnablePackageValidation>true</EnablePackageValidation>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Funcky" />
