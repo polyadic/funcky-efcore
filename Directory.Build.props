@@ -7,7 +7,7 @@
 		<RepositoryUrl>https://github.com/polyadic/funcky-efcore</RepositoryUrl>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Messerli.CodeStyle" PrivateAssets="all" />
+		<PackageReference Include="Polyadic.CodeStyle" PrivateAssets="all" />
 		<PackageReference Include="Funcky.Analyzers" PrivateAssets="all" />
 	</ItemGroup>
 	<PropertyGroup Label="Code Style">
@@ -18,5 +18,8 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+	</PropertyGroup>
+	<PropertyGroup>
+		<ArtifactsPath>$(MSBuildThisFileDirectory)artifacts</ArtifactsPath>
 	</PropertyGroup>
 </Project>
